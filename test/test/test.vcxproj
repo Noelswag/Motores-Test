@@ -56,6 +56,13 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>..\..\vcpkg\installed\x64-windows\lib</AdditionalLibraryDirectories>
     </Link>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+      <Command>git submodule update --recursive --remote
+call ..\..\vcpkg\bootstrap-vcpkg.bat
+..\..\vcpkg\vcpkg.exe install bullet3 glm jsoncpp</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -74,6 +81,13 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>..\..\vcpkg\installed\x64-windows\lib</AdditionalLibraryDirectories>
     </Link>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+      <Command>git submodule update --recursive --remote
+call ..\..\vcpkg\bootstrap-vcpkg.bat
+..\..\vcpkg\vcpkg.exe install bullet3 glm jsoncpp</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
