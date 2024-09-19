@@ -1,0 +1,7 @@
+
+vcpkg
+/.vs
+/test/.vs/test
+/test/test/x64/Debug
+*.user
+/test/x64/Debug
